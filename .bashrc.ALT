@@ -1,0 +1,4 @@
+# === ALIASES ===
+
+alias myip='curl ipinfo.io/ip' # Print my public IP
+alia v='fd --type f --hidden --exclude .git | fzf-tmux -p --reverse | xargs nvim'
