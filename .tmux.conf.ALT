@@ -1,0 +1,26 @@
+unbind C-b
+set -g prefix C-t
+
+# Restart and source tmux config file
+unbind r
+bind r source-file ~/.tmux.conf
+
+# Cycle panes
+unbind ^T
+bind ^T select-pane -t :.+
+
+# Enable mouse in tmux
+set -g mouse on
+
+#Plugins ==================================
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-sensible'
+
+# Dracula Theme Settings
+set -g @plugin 'dracula/tmux'
+set -g @dracula-show-powerline true
+set -g @dracula-show-left-icon session
+set -g @dracula-plugins "cpu-usage ram-usage"
+
+# Run command, must be at the end of the file
+run '~/.tmux/plugins/tpm/tpm'
